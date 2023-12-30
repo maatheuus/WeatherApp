@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer type="module" src="script.js">
+
+    </script>
+
+</head>
+
+<body id="body">
+
+    <div id="container-weather">
+
+        <div class="search-control">
+            <input id="city-name" type="text" class="search-control__search-city search-control__search-city--input"
+                placeholder="Ex: Salvador, br">
+            <label for="city-name" type="text" class="search-control__search-city--error"></label>
+            <button type="button" class="search-control__search-city search-control__search-city--btn ">Search</button>
+        </div>
+        <div id="weather-container">
+            <div id="wharher-container__description">
+                <h1 class="wharher-container__titile"></h1>
+                <div class="weather-main">
+                    <div class="weather-main__tempeture"></div>
+                    <div class="wheathe-main--group">
+                        <div class="weather-main__description"></div>
+                        <div class="weather-main__content-image"><img class="weather-main__image"></div>
+                    </div>
+                </div>
+                <hr>
+                <div class="wind-speed bottom-details"></div>
+                <div class="humidity bottom-details"></div>
+                <div class="feels-like bottom-details"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
