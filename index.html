@@ -6,40 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="assenst/imgs/icon.png" type="image/x-icon">
-    <script defer type="module" src="script.js">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
 
     </script>
 
 </head>
 
-<body id="body">
+<body>
 
-    <div id="container-weather">
-
-        <div class="search-control">
-            <input id="city-name" type="text" class="search-control__search-city search-control__search-city--input"
-                placeholder="Ex: Salvador, br">
-            <label for="city-name" type="text" class="search-control__search-city--error"></label>
-            <button type="button" class="search-control__search-city search-control__search-city--btn ">Search</button>
+    <div class="container">
+        <div class="search-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Enter your location" id="">
+            <button class="fa-solid fa-magnifying-glass"></button>
         </div>
-        <div id="weather-container">
-            <div id="wharher-container__description">
-                <h1 class="wharher-container__titile"></h1>
-                <div class="weather-main">
-                    <div class="weather-main__tempeture"></div>
-                    <div class="wheathe-main--group">
-                        <div class="weather-main__description"></div>
-                        <div class="weather-main__content-image"><img class="weather-main__image"></div>
-                    </div>
+
+        <div class="not-found">
+            <img src="images/404.png" alt="image not found">
+            <p>Oops! Invalid location</p>
+        </div>
+
+        <div class="weather-box">
+            <img src="">
+            <p class="temperature"></p>
+            <p class="description"></p>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>
                 </div>
-                <hr>
-                <div class="wind-speed bottom-details"></div>
-                <div class="humidity bottom-details"></div>
-                <div class="feels-like bottom-details"></div>
+            </div>
+
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Wind speed</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="https://kit.fontawesome.com/7c8801c017.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>

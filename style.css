@@ -1,205 +1,187 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-#body {
-  background-image: url("assenst/imgs/default.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-  box-sizing: border-box;
-
-  height: 100vh;
-}
-
-#container-weather {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-
-  width: 80%;
-  height: 91.3vh;
-  margin: 0 auto;
-  position: relative;
-  top: 5%;
-
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  text-shadow: 2px 2px 1px black;
-}
-
-.search-control {
-  width: auto;
-
-  border-radius: 10px;
-  border: 1px solid transparent;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.search-control__search-city {
-  border-radius: 10px;
-  display: block;
-  border: none;
-
-  margin-right: 10px;
-  background-color: #274c77af;
-  height: 35px;
-}
-
-.search-control__search-city--input {
-  padding-left: 10px;
+  border: 0;
   outline: none;
-  color: #ffffff;
-  box-shadow: 1px 1px 2px 0px black;
-  display: inline-block;
-}
-.search-control__search-city--input::placeholder {
-  color: #ffffff9c;
+  box-sizing: border-box;
 }
 
-.search-control__search-city--error {
-  display: block;
-  font-size: 14px;
-  color: black;
-  font-weight: 700;
-  text-shadow: none;
-  width: 170px;
-
-  position: absolute;
-  left: 10px;
-  transform: translateY(40px);
-
-  visibility: hidden;
-}
-
-.search-control__search-city--btn {
-  display: block;
-  border-radius: 40px;
-  width: 80px;
-  cursor: pointer;
-  color: #ffffffaa;
-  box-shadow: 1px 1px 3px 0px black;
-
-  margin: 10px auto;
-}
-
-#weather-container {
-  background-color: rgba(0, 0, 0, 0.25);
-  padding: 10px;
-  border-radius: 10px;
-  display: none;
-  height: auto;
-  width: 100%;
-
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.wharher-container__titile {
-  font-size: 22px;
-  font-family: "Lucida Sans Unicode", sans-serif;
-  margin: 5px;
-  text-align: center;
-  display: block;
-  width: 100%;
-}
-
-.weather-main {
-  text-align: center;
-  display: block;
-}
-
-.wheathe-main--group {
+body {
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  background: #06283d;
 }
 
-.weather-main__tempeture {
+.container {
+  position: relative;
+  width: 400px;
+  height: 105px;
+  background: #fff;
+  padding: 28px 32px;
+  overflow: hidden;
+  border-radius: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.6s ease-out;
+}
+
+.search-box {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-box input {
+  color: #06283d;
+  width: 80%;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-left: 32px;
+}
+
+.search-box input::placeholder {
+  font-size: 20px;
+  font-weight: 500;
+  color: #06283d;
+  text-transform: capitalize;
+}
+
+.search-box button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  color: #06283d;
+  background: #dff6ff;
+  border-radius: 50%;
+  font-size: 22px;
+  transition: 0.4s ease;
+}
+
+.search-box button:hover {
+  color: #fff;
+  background: #06283d;
+}
+
+.search-box i {
+  position: absolute;
+  color: #06283d;
+  font-size: 28px;
+}
+
+.weather-box {
   text-align: center;
-  font-size: 30px;
-  display: block;
 }
 
-.weather-main__description {
-  display: inline-block;
+.weather-box img {
+  width: 60%;
+  margin-top: 30px;
 }
 
-.weather-main__content-image {
-  display: inline-block;
+.weather-box .temperature {
+  position: relative;
+  color: #06283d;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-top: 30px;
+  margin-left: -16px;
 }
 
-.weather-main__image {
-  height: 45px;
+.weather-box .temperature span {
+  position: absolute;
+  margin-left: 4px;
+  font-size: 1.4rem;
 }
 
-hr {
-  margin-bottom: 30px;
-  background-color: black;
+.weather-box .description {
+  color: #06283d;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
-.bottom-details {
+.weather-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.weather-details .humidity,
+.weather-details .wind {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100px;
+  text-align: center;
+}
+
+.weather-details .humidity {
+  padding-left: 20px;
+  justify-content: flex-start;
+}
+
+.weather-details .wind {
+  padding-right: 20px;
+  justify-content: flex-end;
+}
+
+.weather-details i {
+  color: #06283d;
+  font-size: 26px;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+
+.weather-details span {
+  color: #06283d;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.weather-details p {
+  color: #06283d;
   font-size: 14px;
-  display: block;
-  margin: 13px;
-  text-align: right;
-  /* width: 100%; */
+  font-weight: 500;
 }
 
-@media (min-width: 320px) {
-  #weather-container {
-    width: 50%;
-  }
+.not-found {
+  width: 100%;
+  display: none;
+  text-align: center;
+  margin-top: 50px;
+  scale: 0;
+  opacity: 0;
 }
 
-@media (min-width: 670px) {
-  #container-weather {
-    height: 580px;
+.not-found img {
+  width: 70%;
+}
 
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .search-control {
-    display: block;
-    position: relative;
-  }
-  .search-control__search-city--input {
-    width: 230px;
-    height: 45px;
-  }
-  .search-control__search-city--btn {
-    width: 100px;
-    height: 45px;
+.not-found p {
+  color: #06283d;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 12px;
+  text-transform: capitalize;
+}
 
-    margin: 10px auto;
-  }
+.weather-box,
+.weather-details {
+  scale: 0;
+  opacity: 0;
+}
 
-  .wharher-container__titile {
-    font-size: 48px;
-  }
-  .weather-main__tempeture {
-    font-size: 40px;
-  }
-  .weather-main__description {
-    font-size: 35px;
-  }
-  .weather-main__image {
-    height: 60px;
-  }
+.fade-in {
+  animation: 0.5s fadeIn forwards;
+}
 
-  #weather-container {
-    width: 330px;
-  }
-
-  .bottom-details {
-    font-size: 23px;
-    margin: 10px;
+@keyframes fadeIn {
+  to {
+    scale: 1;
+    opacity: 1;
   }
 }
